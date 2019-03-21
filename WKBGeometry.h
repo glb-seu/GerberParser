@@ -1,10 +1,5 @@
 #pragma once
 
-#ifndef _X86_
-#define _X86_
-#endif
-
-#include <minwindef.h>
 #include "wkb.h"
 #include <vector>
 
@@ -13,9 +8,9 @@ class CWKBGeometry
 	std::vector<unsigned char> m_vecData;
 	void IncrementPoints();
 	void IncrementRings();
-	ULONG m_nLinearRing;
-	ULONG m_nPolygon;
-	ULONG m_nGeometry;
+	unsigned long m_nLinearRing;
+	unsigned long m_nPolygon;
+	unsigned long m_nGeometry;
 public:
 	CWKBGeometry();
 	virtual ~CWKBGeometry();
