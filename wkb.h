@@ -36,67 +36,67 @@ typedef struct tagGM_POINT
 
 typedef struct tagGM_LinearRing
 {
-    ULONG       numPoints;
+    unsigned long       numPoints;
     GM_POINT    Points[1];
 
 }   GM_LinearRing;
 
 typedef struct tagWKB
 {
-	BYTE        byteOrder;
-	ULONG       wkbType;
+	unsigned char        byteOrder;
+	unsigned long       wkbType;
 
 }   WKB;
 
 typedef struct tagWKBPoint
 {
-    BYTE        byteOrder;
-    ULONG       wkbType;
+    unsigned char        byteOrder;
+    unsigned long       wkbType;
     GM_POINT    Point;
 
 }   WKBPoint;
 
 typedef struct tagWKBLineString
 {
-    BYTE        byteOrder;
-    ULONG       wkbType;
-    ULONG       numpoint;
+    unsigned char        byteOrder;
+    unsigned long       wkbType;
+    unsigned long       numpoint;
     GM_POINT    Points[1];
 
 }   WKBLineString;
 
 typedef struct tagWKBPolygon
 {
-    BYTE            byteOrder;
-    ULONG           wkbType;
-    ULONG           numRings;
+    unsigned char            byteOrder;
+    unsigned long           wkbType;
+    unsigned long           numRings;
     GM_LinearRing   rings[1];
 
 }   WKBPolygon;
 
 typedef struct tagWKBMultiPoint
 {
-	BYTE        byteOrder;
-	ULONG       wkbType;
-	ULONG       num_wkbPoints;
+	unsigned char        byteOrder;
+	unsigned long       wkbType;
+	unsigned long       num_wkbPoints;
 	WKBPoint    WKBPoints[1];
 
 }   WKBMultiPoint;
 
 typedef struct tagWKBMultiLineString
 {
-	BYTE            byteOrder;
-	ULONG           wkbType;
-	ULONG           num_wkbLineStrings;
+	unsigned char            byteOrder;
+	unsigned long           wkbType;
+	unsigned long           num_wkbLineStrings;
 	WKBLineString   WKBLineStrings[1];
 
 }   WKBMultiLineString;
 
 typedef struct tagWKBMultiPolygon
 {
-	BYTE        byteOrder;
-	ULONG       wkbType;
-	ULONG       num_wkbPolygons;
+	unsigned char        byteOrder;
+	unsigned long       wkbType;
+	unsigned long       num_wkbPolygons;
 	WKBPolygon  WKBPolygons[1];
 
 }   WKBMultiPolygon;
@@ -118,9 +118,9 @@ typedef struct tagWKBGeometry{
 
 typedef struct tagWKBGeometryCollection
 {
-	BYTE    byteOrder;
-	ULONG   wkbType;
-	ULONG   num_wkbGeometries;
+	unsigned char    byteOrder;
+	unsigned long   wkbType;
+	unsigned long   num_wkbGeometries;
 	WKB     wkb[1];
 
 }   WKBGeometryCollection;
@@ -132,16 +132,16 @@ typedef struct tagWKBGeometryCollection
 #define WKBRectangle_defined
 typedef struct tagGM_Rectangle
 {
-    ULONG       numPoints;
+    unsigned long       numPoints;
     GM_POINT    Points[5];
 
 }   GM_Rectangle;
 
 typedef struct tagWKBRectangle
 {
-	BYTE            byteOrder;
-	ULONG           wkbType;
-    ULONG           numRings;
+	unsigned char            byteOrder;
+	unsigned long           wkbType;
+    unsigned long           numRings;
     GM_Rectangle    rings[1];
 
 }   WKBRectangle;
@@ -150,8 +150,8 @@ typedef struct tagWKBRectangle
 //the following is for internal use only and is NOT part of the open GIS spec
 typedef struct tagWKBCircle
 {
-    BYTE            byteOrder;
-    ULONG           wkbType;
+    unsigned char            byteOrder;
+    unsigned long           wkbType;
     GM_POINT        Centre;
     double          Radius;
 } WKBCircle;
